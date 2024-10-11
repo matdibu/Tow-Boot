@@ -13,8 +13,7 @@
 
   Tow-Boot = {
     defconfig = "rock64-rk3328_defconfig";
-    uBootVersion = "2024.07";
+    uBootVersion = "2024.10";
     buildUBoot = true;
-    withLogo = false;
   };
 }

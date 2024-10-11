@@ -141,6 +141,11 @@ in
           (helpers: with helpers; {
             CMD_POWEROFF = yes;
             SYSRESET_CMD_POWEROFF = yes;
+            VIDEO = yes;
+            DISPLAY = yes;
+            VIDEO_ROCKCHIP = yes;
+            DISPLAY_ROCKCHIP_HDMI = yes;
+            PHY_ROCKCHIP_INNO_HDMI = yes;
           })
         ];
         builder.postPatch =
