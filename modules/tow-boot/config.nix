@@ -84,7 +84,7 @@ in
       # -----
 
       # Ensures white text on black background
-      SYS_WHITE_ON_BLACK = if withLogo then yes else no;
+      SYS_WHITE_ON_BLACK = yes;
 
       # Ensures we're not using Truetype
       CONSOLE_TRUETYPE = no;

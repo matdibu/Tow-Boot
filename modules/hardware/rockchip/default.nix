@@ -146,6 +146,10 @@ in
             VIDEO_ROCKCHIP = yes;
             DISPLAY_ROCKCHIP_HDMI = yes;
             PHY_ROCKCHIP_INNO_HDMI = yes;
+            BOOTSTD = lib.mkForce yes;
+            BOOTSTD_DEFAULTS = lib.mkForce  yes;
+            DISTRO_DEFAULTS = lib.mkForce  no;
+            BOOTCOMMAND =  lib.mkForce (freeform ''"bootflow scan"'');
           })
         ];
         builder.postPatch =
