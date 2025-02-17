@@ -145,7 +145,7 @@ in
             DISPLAY = yes;
             VIDEO_ROCKCHIP = yes;
             DISPLAY_ROCKCHIP_HDMI = yes;
-            PHY_ROCKCHIP_INNO_HDMI = yes;
+            #PHY_ROCKCHIP_INNO_HDMI = yes;
             BOOTSTD = lib.mkForce yes;
             BOOTSTD_DEFAULTS = lib.mkForce  yes;
             DISTRO_DEFAULTS = lib.mkForce  no;
@@ -172,6 +172,10 @@ in
 
     (mkIf cfg.rockchip-rk3328.enable {
       Tow-Boot.builder.additionalArguments.BL31 = "${pkgs.Tow-Boot.armTrustedFirmwareRK3328}/bl31.elf";
+      Tow-Boot.builder.postPatch = ''
+        substituteInPlace arch/arm/dts/rk3328-rock64-u-boot.dtsi \
+        --replace rk3328-sdram-lpddr3-1600.dtsi rk3328-sdram-lpddr3-666.dtsi
+      '';
     })
 
     (mkIf cfg.rockchip-rk3399.enable {
