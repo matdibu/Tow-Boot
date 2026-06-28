@@ -169,7 +169,7 @@ in
                             SYS_CONSOLE_IS_IN_ENV = yes;
                             CONSOLE_MUX = yes;
                             USE_PREBOOT = yes;
-                            PREBOOT = freeform ''"usb start; setenv stdout serial,vidconsole; setenv stderr serial,vidconsole"'';
+                            PREBOOT = freeform ''"setenv stdout serial,vidconsole; setenv stderr serial,vidconsole"'';
 
                             # Auto boot by scanning all devices and boot methods
                             BOOTSTD = lib.mkForce yes;
