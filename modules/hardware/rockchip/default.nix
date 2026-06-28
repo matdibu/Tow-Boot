@@ -176,9 +176,8 @@ in
                             BOOTSTD_FULL = yes;
                             BOOTSTD_DEFAULTS = lib.mkForce yes;
                             DISTRO_DEFAULTS = lib.mkForce no;
-                            BOOTCOMMAND = lib.mkForce (freeform ''"bootflow scan"'');
+                            BOOTCOMMAND = lib.mkForce (freeform ''"bootflow scan -b"'');
                             USE_BOOTCOMMAND = yes;
-
                         }
                     )
                 ];
