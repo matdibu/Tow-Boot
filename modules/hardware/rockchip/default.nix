@@ -173,9 +173,15 @@ in
 
                             # Auto boot by scanning all devices and boot methods
                             BOOTSTD = lib.mkForce yes;
+                            BOOTSTD_FULL = yes;
                             BOOTSTD_DEFAULTS = lib.mkForce yes;
                             DISTRO_DEFAULTS = lib.mkForce no;
+                            BOOTMETH_EXTLINUX = yes; # extlinux.conf (most ARM distros)
+                            BOOTMETH_EFILOADER = yes; # EFI applications
+                            BOOTMETH_EFI_BOOTMGR = yes; # EFI boot manager variables
+                            BOOTMETH_SCRIPT = yes; # boot.scr scripts
                             BOOTCOMMAND = lib.mkForce (freeform ''"bootflow scan"'');
+                            USE_BOOTCOMMAND = yes;
 
                         }
                     )
