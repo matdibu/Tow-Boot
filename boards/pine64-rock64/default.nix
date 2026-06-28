@@ -14,10 +14,10 @@
   Tow-Boot = {
     defconfig = "rock64-rk3328_defconfig";
     buildUBoot = true;
-    uBootVersion = "2025.01";
+    uBootVersion = "2026.04";
     src = (pkgs.fetchurl {
-          url = "https://ftp.denx.de/pub/u-boot/u-boot-2025.04-rc2.tar.bz2";
-          sha256 = "e54102f17328397d5d63b00865e9108d5806d18018509fc24ce6e7e3fe6a12f1";
+          url = "https://ftp.denx.de/pub/u-boot/u-boot-2026.04.tar.bz2";
+          sha256 = "ac7c04b8b7004923b00a4e5d6699c5df4d21233bac9fda690d8cfbc209fff2fd";
         });
   };
 }
